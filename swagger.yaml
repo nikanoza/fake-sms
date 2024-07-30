@@ -23,7 +23,7 @@ paths:
             schema: 
               type: object
                 properties:
-                  to: 
+                  number: 
                     type: string
                   text: 
                     type: string

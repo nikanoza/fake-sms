@@ -10,7 +10,7 @@ const app = express();
 
 app.use(bodyParser.json());
 app.post("/api/sms", async (req, res) => {
-  const { to, text } = req.body;
+  const { number, text } = req.body;
   const from = "Vonage APIs";
 
   const vonage = new Vonage({
@@ -18,12 +18,13 @@ app.post("/api/sms", async (req, res) => {
     apiSecret: process.env.API_SECRET,
   });
   try {
-    const response = await vonage.sms.send({ to, from, text });
+    const response = await vonage.sms.send({ to: number, from, text });
     console.log(response);
   } catch (error) {
     console.log("There was an error sending the messages.");
     console.error(error);
   }
+  return res.status(301).json("gaurkvevelia");
 });
 app.use("/api", swaggerMiddleware());
 
