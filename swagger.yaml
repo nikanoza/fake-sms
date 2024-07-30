@@ -27,6 +27,9 @@ paths:
                   type: string
                 text:
                   type: string
+            example:
+              number: "9955577209950"
+              text: "I am best developer"
       responses:
         "200":
           description: sms sent
