@@ -8,26 +8,25 @@ servers:
   - url: https://fake-sms-production.up.railway.app/api
     description: production server
   - url: http://localhost:3000/api
-    description: local server  
+    description: local server
 
 paths:
   /sms:
     post:
       tags:
-        - Fake sms 
+        - Fake sms
       requestBody:
         description: funny for people
         required: true
         content:
           application/json:
-            schema: 
+            schema:
               type: object
-                properties:
-                  number: 
-                    type: string
-                  text: 
-                    type: string
+              properties:
+                number:
+                  type: string
+                text:
+                  type: string
       responses:
-        '200':
-          description: sms sent  
-  
+        "200":
+          description: sms sent
