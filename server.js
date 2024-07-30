@@ -2,7 +2,7 @@ import bodyParser from "body-parser";
 import express from "express";
 import { Vonage } from "@vonage/server-sdk";
 import dotenv from "dotenv";
-import swaggerMiddleware from "./swagger-middleware";
+import swaggerMiddleware from "./swagger-middleware.js";
 
 dotenv.config();
 
